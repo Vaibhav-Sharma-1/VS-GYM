@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* variables declaration  */
+:root {
+    --body-background-color: rgb(246, 255, 232);
+    --header-height: 60px;
+    --heading-font-size: 1.8rem;
+    --dark-green: rgb(22, 73, 22);
+    --light-green: rgb(230, 255, 230);
+    --nav-hover-color: rgba(17, 95, 17, 0.363);
+}
+
+/* max width of body is 1920px */
+body {
+    max-width: 1920px;
+    margin: auto;
+    background-color: var(--body-background-color);
+}
+
+header {
+    background-color: var(--light-green);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.header-container {
+    padding: .5rem 0;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-section {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-section p {
+    font-size: var(--heading-font-size);
+    color: var(--dark-green);
+    margin-left: .5rem;
+}
+
+.logo-section img {
+    height: 100%;
+    width: auto;
+}
+
+a:active,
+a:focus,
+a:visited {
+    color: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-green);
+    border-bottom: 4px solid var(--light-green);
+    padding: 1.6rem 1rem;
+    margin: 0 .8rem;
+}
+
+nav a:hover {
+    color: var(--nav-hover-color);
+}
+
+nav a:nth-child(5),
+nav a:nth-child(6) {
+    font-weight: bold;
+}
+
+nav a:nth-child(5) {
+    margin-right: 0rem;
+    text-decoration: underline;
+}
+
+.green-button {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-green);
+    color: white;
+    padding: 1rem 2rem;
+    border: 2px solid var(--dark-green);
+    border-radius: 5rem;
+    transition-duration: 400ms;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.green-button:hover {
+    color: var(--dark-green);
+    background-color: white;
+    transition-duration: 400ms;
+}
+
+.green-button:active {
+    transform: scale(.8);
+}
+
+.dropdown-container {
+    display: none;
+}
+
+.gym-main-section {
+    height: 100vh;
+    background-image: url("image/gym.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.gym-jumptron {
+    height: 100vh;
+    background-image: linear-gradient(90deg, white 5%, rgba(255, 255, 255, 0) 100%);
+    padding: 6.5rem;
+}
+
+.gym-mainline {
+    font-size: 3rem;
+    color: var(--dark-green);
+}
+
+.gym-desc {
+    color: rgb(107, 107, 107);
+    margin: 3rem 0;
+}
+
+.community-heading {
+    text-align: center;
+    font-size: var(--heading-font-size);
+    color: var(--dark-green);
+    font-weight: bold;
+    margin: 5rem 0 1rem 0;
+}
+
+.community-heading + hr {
+    opacity: 0.5;
+    margin-bottom: 2rem;
+}
+
+.community-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    flex: 400px;
+    margin: 1px 3px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
+
+.pricing {
+    background-color: rgb(9, 43, 53);
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.pricing-item {
+    margin: 2rem 1rem;
+    flex: 250px;
+    max-width: 350px;
+    border: 2px solid green;
+    padding: 1.7rem 1.2rem 3rem 1.2rem;
+    background-color: white;
+    border-radius: 1rem;
+    transition-duration: 400ms;
+}
+
+.price-heading {
+    font-size: calc(var(--heading-font-size) - .1rem);
+    text-align: center;
+}
+
+.price {
+    font-size: calc(var(--heading-font-size) + 1.5rem);
+    font-weight: bold;
+    color: var(--dark-green);
+    text-align: center;
+}
+
+.price-desc {
+    color: rgb(88, 88, 88);
+    margin: 1.5rem 0 3rem 0;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.price-submit {
+    display: block;
+    text-align: center;
+}
+
+form {
+    background-color: rgb(197, 233, 255);
+}
+
+.form-container {
+    padding: 2rem;
+    padding-bottom: 5rem;
+    max-width: 500px;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(8, minmax(40px, auto));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "name name"
+    "cweight gweight"
+    "age height"
+    "address contact"
+    "myplan myplan"
+    "email email"
+    "message message"
+    "submit submit";
+    grid-gap: 1rem;
+}
+
+
+.form-container * {
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+    color: rgb(78, 78, 78);
+    border: white;
+    border-radius: .5rem;
+    border-bottom: 3px solid white;
+}
+
+.form-container *:focus {
+    outline: none;
+    border-bottom: 3px solid var(--dark-green);
+
+}
+
+#message:focus {
+    border: 3px solid var(--dark-green);
+}
+
+#name {
+    grid-area: name;
+}
+
+#current-weight {
+    grid-area: cweight;
+}
+
+#goal-weight {
+    grid-area: gweight;
+}
+
+#age {
+    grid-area: age;
+}
+
+#height {
+    grid-area: height;
+}
+
+#address {
+    grid-area: address;
+}
+
+#contact-number {
+    grid-area: contact;
+}
+
+#email {
+    grid-area: email;
+}
+
+#message {
+    border: 3px solid white;
+    grid-area: message;
+    height: 160px;
+}
+
+.button {
+    grid-area: submit;
+    color: white;
+    border: 2px solid var(--dark-green);
+}
+
+.button:hover {
+    border: 2px solid var(--dark-green);
+}
+
+.offer-section {
+    border-radius: 1rem;
+    background-color: rgb(10, 42, 68);
+    padding: 2rem 3.5rem;
+    position: relative;
+    top: 6rem;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offer-text {
+    width: 60%;
+}
+
+.offer-mainline {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.offer-limitedtime {
+    margin-top: 3rem;
+    color: rgb(110, 184, 197);
+}
+
+.gradient-button {
+    font-size: 1.8rem;
+    background-image: linear-gradient(90deg);
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-nav img {
+    width: 60px;
+    height: auto;
+    filter: invert();
+    cursor: pointer;
+}
+
+.footer-nav-link a {
+    display: inline-block;
+    color: white;
+    margin: .5rem;
+}
+
+.footer-nav-link a:hover {
+    text-decoration: none;
+}
+
+.copyright {
+    margin: 2rem 0;
+    align-self: center;
+    color: white;
+    text-align: center;
+}
+
+.getintouch {
+    color: white;
+}
+
+.getintouch p {
+    line-height: 2rem;
+}
+
+.touch-text {
+    font-size: 1.5rem;
+    margin-bottom: .8rem;
+}
+
+.icons img {
+    margin: 0 .3rem;
+    width: 40px;
+    height: auto;
+}
+#mailhref{
+    color: white;
+    text-decoration: none;
+}
+#mailhref1:hover{
+    color: aqua;
+}
+@media (min-width: 1366px) {
+    .pricing-item {
+        box-shadow: 2px 10px 25px -5px black;
+    }
+
+    .pricing-item:hover {
+        box-shadow: none;
+        transition-duration: 400ms;
+        transform: scale(.95);
+    }
+
+    .icons img {
+        margin: 0 .3rem;
+        filter: grayscale();
+        transition-duration: 400ms;
+    }
+
+    .icons img:hover {
+        filter: none;
+        transform: scale(1.2);
+        transition-duration: 400ms;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+    :root {
+        --heading-font-size: 1.4rem;
+    }
+
+    .green-button {
+        padding: 0.8rem 1.8rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* dropdown section  */
+    .dropdown-container {
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .dropdown-container:active,
+    .dropdown-container:focus {
+        outline: none;
+        color: none;
+        background: none;
+    }
+
+    .dropdown-items {
+        display: none;
+        right: 0;
+        position: absolute;
+        background-color: var(--light-green);
+        padding: .7rem 1.2rem;
+    }
+    
+    .dropdown-item {
+        display: block;
+        text-decoration: none;
+        background-color: rgb(193, 255, 206);
+        padding: .6rem 1.5rem;
+        margin: .5rem 0;
+        color: var(--dark-green);
+        border-radius: .5rem;
+    }
+    
+    .dropdown-item:hover,
+    .dropdown-item:active {
+        background-color: rgb(143, 255, 167);
+    }
+    
+    .dropdown-container:hover .dropdown-button {
+        color: var(--dark-green);
+        background-color: white;
+        transition-duration: 400ms;
+    }
+
+    .dropdown-container:hover .dropdown-items {
+        display: block;
+    }
+
+    .offer-section {
+        flex-direction: column;
+        max-width: 300px;
+    }
+
+    .offer-text {
+        width: 100%;
+    }
+
+    .offer-mainline {
+        font-size: 1.5rem;
+    }
+
+    .offer-limitedtime {
+        font-size: 0.8rem;
+    }
+
+    .offer-section {
+        position: static;
+        margin: 2rem auto;
+        margin-bottom: 0;
+    }
+
+    .buttons {
+        margin-top: 1rem;
+    }
+
+    .form-container {
+        padding: 1rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        padding: 2em 1rem;
+    }
+
+    .footer-nav,
+    .getintouch {
+        margin: 2rem 0;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 700px) {
+    .gym-jumptron {
+        padding: 3.5rem;
+        background-color: rgba(255, 255, 255, 0.527);
+    }
+
+    .gym-jumptron p:nth-child(1) {
+        margin-top: 5rem;
+    }
+
+    .gym-mainline {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        padding: 1rem;
+        grid-template-rows: repeat(10, minmax(40px, auto));
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "name"
+        "cweight"
+        "gweight"
+        "age"
+        "height"
+        "address"
+        "contact"
+        "myplan"
+        "myplan"
+        "email"
+        "message"
+        "submit";
+        grid-gap: 1rem;
+    }
+
+}
+
+
+
+
+
+
+@media (max-width: 400px) {
+    .gym-jumptron {
+        padding: 2rem;
+    }
+
+    .gym-mainline {
+        font-size: 1.8rem;
+    }
+
+    .offer-section {
+        padding: 1.5rem;
+    }
+}
+
+
+
+
+

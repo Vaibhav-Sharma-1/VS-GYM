@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="gradient-button.css">
+    <title>VS GYM | Home</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="image/logo.png" alt="logo">
+                <p>VS GYM</p>
+            </div>
+            <nav>
+                <a href="#" style="border-bottom: 4px solid rgb(22, 73, 22);">Home</a>
+                <a href="#comm">Our Community</a>
+                <a href="#plan1">Courses</a>
+                <a href="#foot">Contact us</a>
+                <a href="#"></a>
+                <a href="https://vaibhav-sharma-1.github.io/personal-site/" target=”_blank” class="green-button">About
+                    me</a>
+            </nav>
+            <div class="dropdown-container">
+                <p class="dropdown-button green-button">Menu</p>
+                <div class="dropdown-items">
+                    <a href="#" class="dropdown-item" style="background-color: rgb(143, 255, 167);">Home</a>
+                    <a href="#comm" class="dropdown-item">Our Community</a>
+                    <a href="#plan1" class="dropdown-item">Courses</a>
+                    <a href="#foot" class="dropdown-item">Contact Us</a>
+                    <!-- <a href="#" class="dropdown-item"></a> -->
+                    <a href="https://vaibhav-sharma-1.github.io/personal-site/" target=”_blank”
+                        class="dropdown-item">About me</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="gym-main-section">
+            <div class="gym-jumptron">
+                <p class="gym-mainline">Escape the Crazy</p>
+                <p class="gym-mainline">Practice in Paradise</p>
+                <p class="gym-mainline">Rejuvinate your Spirit</p>
+                <p class="gym-desc">Start your journey with us.</p>
+                <a href="#joinus" class="green-button">Join now</a>
+            </div>
+        </section>
+        <section class="our-community" id="comm">
+            <p class="community-heading">Our Community</p>
+            <hr>
+            <div class="community-gallery">
+                <div class="gallery-item"><img src="image/8.jpg" alt=""></div>
+                <div class="gallery-item"><img src="image/2.jpg" alt=""></div>
+                <div class="gallery-item"><img src="image/6.jpg" alt=""></div>
+                <div class="gallery-item"><img src="image/4.jpg" alt=""></div>
+                <div class="gallery-item"><img src="image/5.jpg" alt=""></div>
+                <div class="gallery-item"><img src="image/7.jpg" alt=""></div>
+                <div class="gallery-item"><img src="image/3.jpg" alt=""></div>
+                <div class="gallery-item"><img src="image/1.jpg" alt=""></div>
+            </div>
+        </section>
+        <p class="main-price-heading community-heading" id="plan1">Choose Your Plan</p>
+        <hr>
+        <section class="pricing">
+            <div class="pricing-item">
+                <p class="price-heading">Basic</p>
+                <p class="price">$59</p>
+                <p class="price-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nemo est
+                    maxime. Ipsa sed aspernatur dolor, veritatis optio rem praesentium unde assumenda asperiores
+                    officiis itaque, odit magnam vel fugiat nesciunt?</p>
+                <a href="#joinus" class="price-submit green-button">Get Basic</a>
+            </div>
+            <div class="pricing-item">
+                <p class="price-heading">Intermediate</p>
+                <p class="price">$99</p>
+                <p class="price-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nemo est
+                    maxime. Ipsa sed aspernatur dolor, veritatis optio rem praesentium unde assumenda asperiores
+                    officiis itaque, odit magnam vel fugiat nesciunt?</p>
+                <a href="#joinus" class="price-submit green-button">Get Intermediate</a>
+
+            </div>
+            <div class="pricing-item">
+                <p class="price-heading">Advance</p>
+                <p class="price">$199</p>
+                <p class="price-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nemo est
+                    maxime. Ipsa sed aspernatur dolor, veritatis optio rem praesentium unde assumenda asperiores
+                    officiis itaque, odit magnam vel fugiat nesciunt?</p>
+                <a href="#joinus" class="price-submit green-button">Get Advance</a>
+            </div>
+        </section>
+        <section class="contact-container" id="joinus">
+            <p class="community-heading">Join us</p>
+            <hr>
+            <form action="https://formspree.io/f/xgepqena" method="POST">
+                <div class="form-container">
+                    <input type="text" name="fullname" placeholder="Full Name" id="name" required>
+                    <input type="text" name="current-weight" placeholder="Current Weight" id="current-weight">
+                    <input type="text" name="goal-weight" placeholder="Goal Weight" id="goal-weight">
+                    <input type="text" name="age" placeholder="Age (yrs)" id="age" required>
+                    <input type="text" name="height" placeholder="Height(cm)" id="height">
+                    <input type="text" name="address" placeholder="Address" id="address" required>
+                    <input type="text" name="contact" placeholder="Contact Number" id="contact-number" required>
+
+                    <label for="P&P"><strong>Plan & Price</strong> </label>                
+                 <select type="text" name="myplan" id="car" required>
+                     <option value="ba">Basic $59</option>
+                     <option value="in" selected="">Intermediate $99</option>
+                     <option value="ad" selected="">Advance $199</option>
+                 </select>
+                    <input type="email" name="_replyto" placeholder="Email" id="email" required>
+                    
+                    <textarea name="message" id="message" cols="30" rows="10"
+                        placeholder="Leave your mesage..."></textarea>
+                    <button class="green-button button" value="Send">Submit</button>
+                </div>
+                <div class="offer-section">
+                    <div class="offer-text">
+                        <p class="offer-mainline">New Student Special- Over 40% off - 2 Week Start Up Challenge - just
+                            $49</p>
+                        <p class="offer-limitedtime">Limited Time Offer: Exclusively for New students and Local
+                            Residents.</p>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn-hover color-1"><a href="#joinus">Learn more</a> </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-nav">
+                <img src="image/logo.png" alt="">
+                <div class="footer-nav-link">
+                    <a href="#">Home</a><br>
+                    <a href="https://vaibhav-sharma-1.github.io/personal-site/" target=”_blank”>About</a><br>
+                    <a href="#plan1">Courses</a><br>
+                    <a href="#comm">Our Community</a>
+                </div>
+            </div>
+            <div class="getintouch" id="foot">
+                <p class="touch-text">Get in touch</p>
+                <div class="icons">
+                   <a href="https://www.facebook.com/profile.php?id=100024916807421" target="_blank"><img src="image/facebook.png" alt=""></a> 
+                    <a href="https://twitter.com/sharma_vaibhav1" target="_blank"><img src="image/twitter.png" alt=""></a>
+                  <a href="https://www.instagram.com/vansh_chaudharyy/" target="_blank"> <img src="image/instagram.png" alt=""></a> 
+                </div>
+                <p class="footer-address">Sai Puram Colony, Bijnor</p>
+                <p class="footer-contact">8171859047, 9058885506</p>
+               <a href="mailto:vaibhavsharma987s6@gmail.com"  id="mailhref"><p class="footer-mail" id="mailhref1">vaibhavsharma987s6@gmail.com</p></a> 
+                <a href="mailto:vanshchaudhary0107@gmail.com" id="mailhref"><p class="footer-mail" id="mailhref1">vanshchaudhary0107@gmail.com</p></a>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright &#169; 2021 VS GYM All Rights Reserved &nbsp; | &nbsp; Privacy Policy</p>
+        <p class="copyright">Created by <a href="https://www.instagram.com/vaibhavsharma_1/" target="_blank" id="mailhref"id="mailhref1">Vaibhav Sharma</a> and <a href="https://www.instagram.com/vansh_chaudharyy/" target="_blank" id="mailhref"id="mailhref1">Vansh Choudhary</a> </p>   
+    </footer>
+    
+</body>
+
+</html>
